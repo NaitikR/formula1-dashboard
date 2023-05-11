@@ -17,7 +17,7 @@ const Sankeyplot = () => {
           nodeGroup: d => d.id.split(/\W/)[0], // take first word for color
           format: (f => d => `${f(d)} points`)(d3.format(",.1~f")),
           width:500,
-          height: window.innerHeight - 60
+          height: window.innerHeight - 65
           })    
     }, [])
 

@@ -5,8 +5,8 @@ import * as d3 from "https://cdn.jsdelivr.net/npm/d3@7/+esm";
 const LineChart = ({data}) => {
     const svgRef = useRef(0);
     const margin = {top: 20, bottom: 30, left: 40, right: 30};
-    const width = 850
-    const height = 600
+    const width = 500//window.innerWidth/3//850
+    const height = 400//window.innerHeight/3//600
 
     let toRemove = ["Toro Rosso", "Manor Maruss", "Lotus F1", "Sauber", "Force India", "Racing Point", 'Manor Marussia', 'Marussia', 'Caterham', 'Lotus']
 
@@ -79,29 +79,34 @@ const LineChart = ({data}) => {
 
     const svg = d3.select(svgRef.current)
       .append('svg')
-      .attr("width", width+100)
+      .attr("width", width)
       .attr("height", height)
-      .attr("viewBox", [0, 0, width, height])
-      .attr("style", "max-width: 100%; height: auto; height: intrinsic;")
+      .attr("viewBox", [-20, 0, width+20, height])
+      .attr("style", "max-width: 100%; height: max-content; height: intrinsic;")
 
     svg.append("g")
       .attr("transform", `translate(0,${height - margin.bottom})`)
       .attr("class", "axisWhite")
       .call(xAxis)
-      .append("text")
+
+      
+      svg.append("text")
+      .attr("class", "axisLabel")
       .attr("text-anchor", "middle")
-    .attr("x", 500) //middle of the xAxis
-    .attr("y", 20) // a little bit below xAxis
+    .attr("x", width/2+30) 
+    .attr("y", height) 
     .text("Year")
 
     svg.append("g")
       .attr("transform", `translate(${margin.left},0)`)
       .attr("class", "axisWhite")
       .call(yAxis)
-    .append("text")
+
+    svg.append("text")
+    .attr("class", "axisLabel")
     .attr("transform", "rotate(-90)")
     .attr("x", -height/2)
-    .attr("y", 500)
+    .attr("y", 15)
     .attr("text-anchor", "middle")
     .text("Position")
       
@@ -120,25 +125,25 @@ const LineChart = ({data}) => {
     .attr("d", ([, I]) => line(I));
     
 
-    let legend = d3.select("svg")
-        .selectAll('g.legend')
-        .data(sumstat)
-        .enter()
-        .append("g")
-        .attr("class", "legend");
+    // let legend = d3.select("svg")
+    //     .selectAll('g.legend')
+    //     .data(sumstat)
+    //     .enter()
+    //     .append("g")
+    //     .attr("class", "legend");
     
-        legend.append("circle")
-        .attr("cx", 800)
-        .attr('cy', (d, i) => i * 30 + 100)
-        .attr("r", 5)
-        .style("fill", d => constructor_color_map[d.key])
+    //     legend.append("circle")
+    //     .attr("cx", 800)
+    //     .attr('cy', (d, i) => i * 30 + 100)
+    //     .attr("r", 5)
+    //     .style("fill", d => constructor_color_map[d.key])
     
-        legend.append("text")
-        .attr("font-size", 13)
-        .attr("fill", "white")
-        .attr("x", 820)
-        .attr("y", (d, i) => i * 30 + 100)
-        .text(d => d.key)
+        // legend.append("text")
+        // .attr("font-size", 13)
+        // .attr("fill", "white")
+        // .attr("x", 820)
+        // .attr("y", (d, i) => i * 30 + 100)
+        // .text(d => d.key)
         
 
     }, [])

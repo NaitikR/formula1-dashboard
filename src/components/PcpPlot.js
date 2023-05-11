@@ -49,8 +49,9 @@ const PcpPlot = ({data}) => {
   }
 
     // const cluster_colors = data.color
-    const width = window.innerWidth - 200, height = 700
-    const margin = {top: 20, bottom: 20, left: 20, right: 20};
+    const width = window.innerWidth/2//500
+    const height = window.innerHeight/2//300
+    const margin = {top: 20, bottom: 20, left: 40, right: 0};
 
 
     const [axisNames, setAxis] = useState(features)
@@ -92,7 +93,7 @@ const PcpPlot = ({data}) => {
         .append('svg')
         .attr("width", width - margin.left-margin.right)
         .attr("height", height - margin.top - margin.bottom)
-        .attr("viewBox", [0, 0, width, height+40])
+        .attr("viewBox", [-20, 0, width+20, height+40])
         .attr("style", "max-width: 100%; height: auto; height: intrinsic;");
 
     const path = svg.append("g")

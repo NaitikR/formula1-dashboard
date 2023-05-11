@@ -36,17 +36,20 @@ const App = () => {
   return (
     <div className="App">
       <div id="header">Formula 1 : The Pit Wall</div>
+
       <div class="parent">
         <div class="div1"> <Sankeyplot/> </div>
-        <div class="div2"> {pcpdata && <PcpPlot data={pcpdata}/>} </div>
+        {/* <div class="div2"> {conPie && <Piechartplot MdsData={conPie}/>} </div> */}
         <div class="div3"> {conPie && <Piechartplot MdsData={conPie}/>} </div>
-        <div class="div4"> {driverPie && <Piechartplot MdsData={driverPie}/>}  </div>
-        <div class="div5"> {data && <LineChart data={data}/>} </div>
-        <div class="div6"> {boxData &&  <Boxgraph datapt={boxData}/> } </div>
-        <div class="div7"> </div> 
+        <div class="div2"> {boxData &&  <Boxgraph datapt={boxData}/> } </div>
+        <div class="div4"> {data && <LineChart data={data}/>} </div>
+        <div class="div5"> {pcpdata && <PcpPlot data={pcpdata}/>} </div>
+        <div class="div6"> </div>
       </div>
     </div>
   );
 }
 
 export default App;
+
+// {driverPie && <Piechartplot MdsData={driverPie}/>}

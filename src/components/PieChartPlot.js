@@ -11,8 +11,8 @@ const Piechartplot = ({MdsData}) => {
         PieChart(MdsData, {
             name: d => d.nationality? d.nationality : d.constructor_nationality,
             value: d => +d.count,
-            width: 300,
-            height: 300
+            width: window.innerHeight/3,
+            height: window.innerHeight/3
           })
         
         //console.log(chart)
@@ -111,7 +111,7 @@ const Piechartplot = ({MdsData}) => {
       }
 
     return(
-        <div>
+        <div style={{padding: 20}}>
             <svg ref={svgref}>
             </svg>
         </div>

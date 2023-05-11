@@ -8,11 +8,11 @@ const boxdata = require('../utils/boxdata.json')
 
 const Boxgraph = ({datapt}) => {
     
-    const M = {L: 5, R: 5, B: 5, T: 5}
+    const M = {L: 10, R: 3, B: 5, T: 20}
 
     const width = 400, height = 400;
     const W = 300;
-    const H = 300;
+    const H = 350
     
 //    console.log(boxdata)
   
@@ -88,7 +88,7 @@ const Boxgraph = ({datapt}) => {
         .range([H, M.T+M.B])
     const band = d3.scaleBand()
         .domain(d3.range(stats.length))
-        .range([M.L+M.B, W - M.L - M.R] )
+        .range([M.L+M.B+10, W - M.L - M.R] )
         .paddingInner(0.3)
         .paddingOuter(0.2)
 
@@ -100,24 +100,41 @@ const Boxgraph = ({datapt}) => {
         .domain(constructorName)
         .range([M.L+M.B, W - M.L - M.R ])
         
-    const xAxis = d3.axisBottom(band2).ticks();
+    const xAxis = d3.axisBottom(band2).ticks().tickValues([]);
     const yAxis = d3.axisLeft(scale2).ticks();
 
     svg.select(".x-axis")
     .attr("class", "axisWhite")
     .attr("transform", `translate(${3*M.L}, ${H})`) 
     .call(xAxis)
-    .selectAll("text")	
-        .style("text-anchor", "end")
-        .attr("dx", "-.8em")
-        .attr("dy", ".15em")
-        .attr("transform", "rotate(-65)");
+
+    svg.append("text")
+    .attr("class", "axisLabel")
+    .attr("text-anchor", "middle")
+  .attr("x", width/2) 
+  .attr("y", H+20) 
+  .text("Teams")
+
+    // .selectAll("text")
+    // .remove()	
+    //     .style("text-anchor", "end")
+    //     .attr("dx", "-.8em")
+    //     .attr("dy", ".15em")
+    //     .attr("transform", "rotate(-65)");
             
 
     svg.select(".y-axis")
     .attr("class", "axisWhite")
             .call(yAxis)
             .attr("transform", `translate(${5*M.L}, ${0})`)
+
+    svg.append("text")
+    .attr("class", "axisLabel")
+    .attr("transform", "rotate(-90)")
+    .attr("x", -H/2)
+    .attr("y", 15)
+    .attr("text-anchor", "middle")
+    .text("Pitstop duration(s)")
            
 
   const plot = boxplot()

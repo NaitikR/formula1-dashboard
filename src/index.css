@@ -41,6 +41,17 @@ code {
 
 .axisWhite text{
   fill: white;
+  /* font-weight: bold; */
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.1em;
+}
+
+.axisLabel {
+  fill: #bdbdbd;
+  font-family: 'Montserrat', sans-serif;
+  font-weight:550;
+  font-size: 14px;
+
 }
 
 .parent {
@@ -51,9 +62,8 @@ code {
   grid-row-gap: 0px;
   }
   .div1 { grid-area: 1 / 1 / 7 / 4; }
-  .div2 { grid-area: 5 / 4 / 7 / 10; }
-  .div3 { grid-area: 3 / 4 / 5 / 6; }
-  .div4 { grid-area: 1 / 4 / 3 / 6; }
-  .div5 { grid-area: 1 / 6 / 3 / 9; }
-  .div6 { grid-area: 3 / 6 / 5 / 9; }
-  .div7 { grid-area: 1 / 9 / 5 / 10; }
+  .div2 { grid-area: 1 / 4 / 4 / 6; }
+  .div3 { grid-area: 4 / 4 / 7 / 6; }
+  .div4 { grid-area: 1 / 6 / 4 / 9; }
+  .div5 { grid-area: 4 / 6 / 7 / 10; }
+  .div6 { grid-area: 1 / 9 / 4 / 10; }
