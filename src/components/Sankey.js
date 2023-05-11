@@ -176,7 +176,7 @@ function SankeyChart({
           }
           else {
             props.linkDriverNationality(d.id);
-            props.linkTeamLineChart("");
+            props.linkTeamLineChart(undefined);
 
           } 
         })

@@ -42,7 +42,13 @@ const LegendChart = ({datapt}) => {
         '#4E7C9B',
         '#2293D1']
 
+        const clearChart=()=>{
+            const accessToRef = d3.select(svgRef.current)
+            accessToRef.selectAll("svg").remove();
+        }
+
     useEffect(() => {
+        clearChart()
 
 
 const svg = d3.select(svgRef.current)

@@ -8,9 +8,13 @@ const Piechartplot = ({MdsData, driverData, selectedDriver}) => {
     const svgref = useRef(); 
     const [nation, setNation] = useState("");
 
-    
+    const clearChart=()=>{
+      const accessToRef = d3.select(svgref.current)
+      accessToRef.selectAll("svg").remove();
+  }
 
     useEffect(() => {
+      clearChart()
       d3.filter(driverData, function(d) {
         if(d.driver_name == selectedDriver) {
           setNation(d.driver_nationality);

@@ -49,7 +49,7 @@ const App = () => {
     d3.csv(conspieurl).then(data => setConPie(data))
     d3.csv(piturl).then(data => setBoxData(data))
     d3.csv(driver_name_url).then(data => setDriverData(data))
-  }, [])
+  }, [teamLine])
   return (
     <div className="App">
       <div id="header">Formula 1 : The Pit Wall</div>

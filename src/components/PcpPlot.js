@@ -80,8 +80,15 @@ const PcpPlot = ({data}) => {
     const brushWidth = 30;
     const unselectedColor = "#000";
 
+    const clearChart=()=>{
+      const accessToRef = d3.select(svgRef.current)
+      accessToRef.selectAll("svg").remove();
+  }
+
     const svgRef = useRef(0);
     useEffect(() => {
+
+      clearChart()
 
     const brush = d3.brushY().extent([
         [-(brushWidth / 2), margin.top],
@@ -155,8 +162,7 @@ const PcpPlot = ({data}) => {
         svg.property("value", selected).dispatch("input");
     }
 
-    },[data]) 
-    // d3.select("svg").remove()
+    },[]) 
 
     return (
         <div

@@ -38,11 +38,14 @@ const LineChart = ({data, teamLine}) => {
 
     const clearChart=()=>{
       const accessToRef = d3.select(svgRef.current)
-      accessToRef.select("svg").remove();
+      accessToRef.selectAll("svg").remove();
   }
   
 
     useEffect(() => {
+
+      // if(teamLine != undefined) 
+      clearChart()
 
     const sumstat = Array.from(d3.group(filter_data, d => d.name), ([key, value]) => ({key, value}))
     // d3.map(sumstat, d => d.value.map(d => console.log(+d.year)))
@@ -159,7 +162,7 @@ const LineChart = ({data, teamLine}) => {
         
         
     }, [data,teamLine])
-    if(teamLine != undefined) clearChart()
+    
     // clearChart()
     
 
