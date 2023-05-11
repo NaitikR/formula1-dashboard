@@ -32,7 +32,8 @@ const App = () => {
     setTeamLine(current => [...current, value])
   }
   // console.log(teamLine)
-  const csvUrl = "https://gist.githubusercontent.com/NaitikR/dd1b640612c58836026f12b7c8f21b4e/raw/5c47b9e1d639a053f2c4bf326e0021c54865ee5c/linechartfinal.csv"
+  const csvUrl = "https://gist.githubusercontent.com/NaitikR/dd1b640612c58836026f12b7c8f21b4e/raw/729829f6b0860c1c4136e86c8c21c2c8466f9acf/linechartfinal.csv"
+  // const csvUrl = "https://gist.githubusercontent.com/NaitikR/dd1b640612c58836026f12b7c8f21b4e/raw/5c47b9e1d639a053f2c4bf326e0021c54865ee5c/linechartfinal.csv"
   // const csvUrl = "https://gist.githubusercontent.com/SimrnGupta/656df80380d93af3d5803a74d0d707ae/raw/constructors_positions.csv"
   const csvUrl2 = "https://gist.githubusercontent.com/SimrnGupta/6e0e8a7be7ec520185a7739e170312c5/raw/pcpdatanew.csv"
   // const drivpieurl = "https://gist.githubusercontent.com/NaitikR/395312d800ae4f8385a7df0998ff6b3f/raw/1eacfaeb98d8c0b16aab8e84847b7bd5df9889af/nation.csv"

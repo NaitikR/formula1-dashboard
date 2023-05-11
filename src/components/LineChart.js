@@ -19,6 +19,8 @@ const LineChart = ({data, teamLine}) => {
     const Y = d3.map(filter_data, d => +d.position)
     const Z = d3.map(filter_data, d => d.name)
 
+    // console.log(Z)
+
     let xRange = [margin.left, width - margin.right] 
     let yRange = [height - margin.bottom,margin.top]
 
