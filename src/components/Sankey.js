@@ -169,6 +169,7 @@ function SankeyChart({
         .attr("y", d => d.y0)
         .attr("height", d => d.y1 - d.y0)
         .attr("width", d => d.x1 - d.x0)
+        
         .on("click", function(event,d) {
           // console.log(d.index)
           if(constructor_color_map[G[d.index]]) {
@@ -180,7 +181,7 @@ function SankeyChart({
 
           } 
         })
-  
+  console.log(nodes)
       if (G) node.attr("fill", ({index: i}) => constructor_color_map[G[i]]? constructor_color_map[G[i]] : "#9e9e9e");
       if (Tt) node.append("title").text(({index: i}) => Tt[i]);
   
@@ -195,7 +196,6 @@ function SankeyChart({
     link.append("path")
     .attr("d", sankeyLink())
     .attr("stroke", ({target: {index: i}}) => constructor_color_map[G[i]])
-        
     .attr("opacity", 1)
     .attr("stroke-width", ({width}) => Math.max(1, width))
     .call(Lt ? path => path.append("title").text(({index: i}) => Lt[i]) : () => {});

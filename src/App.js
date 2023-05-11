@@ -52,7 +52,7 @@ const App = () => {
   }, [teamLine])
   return (
     <div className="App">
-      <div id="header">Formula 1 : The Pit Wall</div>
+      <div id="header"> Formula 1 : The Pit Wall</div>
 
       <div className="parent">
         <div class="div1"> 

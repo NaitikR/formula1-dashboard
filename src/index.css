@@ -25,7 +25,12 @@ body {
   font-weight: bold;
   text-transform: uppercase;
 }
-
+.card {
+  padding: 1em;
+  background-color: rgb(86, 86, 86);
+  border-radius: 10px;
+  margin: 0.5em 2em;
+}
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;

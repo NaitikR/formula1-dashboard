@@ -32,7 +32,7 @@ const LineChart = ({data, teamLine}) => {
     const yScale = d3.scaleLinear(yDomain, yRange);
 
     const xAxis = d3.axisBottom(xScale).ticks(width / 80).tickSizeOuter(0);
-    const yAxis = d3.axisLeft(yScale).ticks(height / 60).tickSizeOuter(0);
+    const yAxis = d3.axisLeft(yScale).ticks();
 
     // console.log(Z)
 
