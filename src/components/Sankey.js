@@ -4,12 +4,12 @@ import { Grid } from '@mui/material';
 import { sankey as d3Sankey } from 'd3-sankey';
 const energy = require('../utils/f1_energy.json')
 
-const Sankeyplot = () => {
+const Sankeyplot = (props) => {
 
     const svgref = useRef(); 
     let sankey = d3Sankey();
 
-
+ 
     useEffect(() => {
         SankeyChart({
             links: energy
@@ -169,6 +169,17 @@ function SankeyChart({
         .attr("y", d => d.y0)
         .attr("height", d => d.y1 - d.y0)
         .attr("width", d => d.x1 - d.x0)
+        .on("click", function(event,d) {
+          // console.log(d.index)
+          if(constructor_color_map[G[d.index]]) {
+            props.linkTeamLineChart(d.id);
+          }
+          else {
+            props.linkDriverNationality(d.id);
+            props.linkTeamLineChart("");
+
+          } 
+        })
   
       if (G) node.attr("fill", ({index: i}) => constructor_color_map[G[i]]? constructor_color_map[G[i]] : "#9e9e9e");
       if (Tt) node.append("title").text(({index: i}) => Tt[i]);

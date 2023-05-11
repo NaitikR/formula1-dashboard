@@ -67,7 +67,7 @@ const PcpPlot = ({data}) => {
         }
         else{
             const uniqueStates = [... new Set(data.map(e => e['circuit_name']))]
-            console.log(uniqueStates)
+            // console.log(uniqueStates)
             return [axisName, d3.scaleBand(uniqueStates, [margin.top, height - margin.bottom])]
         }
     } ));

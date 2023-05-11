@@ -2,13 +2,15 @@ import React, { useState, useEffect, useRef } from "react";
 import * as d3 from "https://cdn.jsdelivr.net/npm/d3@7/+esm";
 
 
-const LineChart = ({data}) => {
-    const svgRef = useRef(0);
+const LineChart = ({data, teamLine}) => {
+    const svgRef = useRef();
     const margin = {top: 20, bottom: 30, left: 40, right: 30};
     const width = 500//window.innerWidth/3//850
     const height = 400//window.innerHeight/3//600
 
-    let toRemove = ["Toro Rosso", "Manor Maruss", "Lotus F1", "Sauber", "Force India", "Racing Point", 'Manor Marussia', 'Marussia', 'Caterham', 'Lotus']
+    // console.log(data)
+
+    let toRemove = ["ToroRosso", "ManorMaruss", "LotusF1", "Sauber", "ForceIndia", "RacingPoint", 'ManorMarussia', 'Marussia', 'Caterham', 'Lotus']
 
     let filter_data = data.filter( function( el ) {
       return !toRemove.includes( el.name );
@@ -34,8 +36,11 @@ const LineChart = ({data}) => {
 
     // console.log(Z)
 
-
-
+    const clearChart=()=>{
+      const accessToRef = d3.select(svgRef.current)
+      accessToRef.select("svg").remove();
+  }
+  
 
     useEffect(() => {
 
@@ -43,15 +48,15 @@ const LineChart = ({data}) => {
     // d3.map(sumstat, d => d.value.map(d => console.log(+d.year)))
 
     let mediaName = sumstat.map(d => d.key) 
-    console.log(mediaName)
+    // console.log(mediaName)
 
     let constructor_color_map = {
-      'Toro Rosso':'#0000FF',
+      'ToroRosso':'#0000FF',
       'Mercedes':'#6CD3BF',
-      'Red Bull':'#1E5BC6',
+      'RedBull':'#1E5BC6',
       'Ferrari':'#ED1C24',
       'Williams':'#37BEDD',
-      'Force India':'#FF80C7',
+      'ForceIndia':'#FF80C7',
       'Virgin':'#c82e37',
       'Renault':'#FFD800',
       'McLaren':'#F58020',
@@ -62,12 +67,12 @@ const LineChart = ({data}) => {
       'Lotus F1':'#FFB800',
       'Marussia':'#6E0000',
       'Manor Marussia':'#6E0000',
-      'Haas F1 Team':'#B6BABD',
+      'HaasF1Team':'#B6BABD',
       'Racing Point':'#F596C8',
-      'Aston Martin':'#2D826D',
-      'Alfa Romeo':'#B12039',
+      'AstonMartin':'#2D826D',
+      'AlfaRomeo':'#B12039',
       'AlphaTauri':'#4E7C9B',
-      'Alpine F1 Team':'#2293D1'
+      'AlpineF1Team':'#2293D1'
   }
 
 
@@ -78,6 +83,7 @@ const LineChart = ({data}) => {
       .y(i => yScale(Y[i]));
 
     const svg = d3.select(svgRef.current)
+    .attr("class", "linechart")
       .append('svg')
       .attr("width", width)
       .attr("height", height)
@@ -111,6 +117,7 @@ const LineChart = ({data}) => {
     .text("Position")
       
     const path = svg.append("g")
+    .attr("class", "path")
     .attr("fill", "none")
     .attr("stroke", "blue")
     // .attr("stroke-linecap", strokeLinecap)
@@ -122,6 +129,11 @@ const LineChart = ({data}) => {
   .join("path")
     // .style("mix-blend-mode", mixBlendMode)
     .attr("stroke", (d,i) => constructor_color_map[d[0]])
+    .attr("opacity", d => {
+      if(teamLine === "") return 1;
+      return d[0] === teamLine ? 1 : 0.2;
+      // return 1;
+    })
     .attr("d", ([, I]) => line(I));
     
 
@@ -145,8 +157,10 @@ const LineChart = ({data}) => {
         // .attr("y", (d, i) => i * 30 + 100)
         // .text(d => d.key)
         
-
-    }, [])
+        
+    }, [data, teamLine])
+    clearChart()
+    
 
 
     return(

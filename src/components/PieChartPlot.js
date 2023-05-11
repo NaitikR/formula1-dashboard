@@ -2,22 +2,37 @@ import React, { useEffect, useRef , useState} from 'react'
 import * as d3 from "https://cdn.jsdelivr.net/npm/d3@7/+esm"
 import { Grid } from '@mui/material';
 
-const Piechartplot = ({MdsData}) => {
+const Piechartplot = ({MdsData, driverData, selectedDriver}) => {
     
-    
+    // console.log(MdsData)
     const svgref = useRef(); 
+    const [nation, setNation] = useState("");
+
+    
 
     useEffect(() => {
+      d3.filter(driverData, function(d) {
+        if(d.driver_name == selectedDriver) {
+          setNation(d.driver_nationality);
+          // console.log(d)
+        } 
+       
+      })
         PieChart(MdsData, {
             name: d => d.nationality? d.nationality : d.constructor_nationality,
             value: d => +d.count,
             width: window.innerHeight/3,
             height: window.innerHeight/3
           })
+
+          
         
-        //console.log(chart)
+        
+        // console.log(nation)
+        
+        // console.log(chart)
     
-    }, [MdsData])
+    }, [selectedDriver, nation])
     
 
     function PieChart(data, {
@@ -63,7 +78,7 @@ const Piechartplot = ({MdsData}) => {
           const T = title;
           title = i => T(O[i], i, data);
         }
-      
+       
         // Construct arcs.
         const arcs = d3.pie().padAngle(padAngle).sort(null).value(i => V[i])(I);
         const arc = d3.arc().innerRadius(innerRadius).outerRadius(outerRadius);
@@ -91,7 +106,17 @@ const Piechartplot = ({MdsData}) => {
           .data(arcs)
           .join("path")
             .attr("fill", d => color(N[d.data]))
+            
             .attr("d", arc)
+            .attr("opacity", function(d) {
+              if(nation === "") return 1;
+              if(nation == N[d.index]) {
+                // console.log(d);
+                return 1
+              } 
+              return 0.1
+              // return N[d.index] == nation ? 1 : 0.2
+            } )
           .append("title")
             .text(d => title(d.data));
       

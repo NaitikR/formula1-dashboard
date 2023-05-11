@@ -5,47 +5,38 @@ import * as d3 from "https://cdn.jsdelivr.net/npm/d3@7/+esm";
 const LegendChart = ({datapt}) => {
     const svgRef = useRef();
     const namess = [
-        'Toro Rosso',
+       
         'Mercedes', 
         'Red Bull', 
         'Ferrari', 
         'Williams', 
-        'Force India',
-        'Virgin', 
+        
         'Renault', 
         'McLaren', 
-        'Sauber', 
-        'Lotus', 
-        'HRT', 
-        'Caterham', 
-        'Lotus F1', 'Marussia',
-        'Manor Marussia',
+        
+        
+        
         'Haas F1 Team',
-        'Racing Point',
+        
         'Aston Martin', 
         'Alfa Romeo',
         'AlphaTauri', 
         'Alpine F1 Team']
 
     const colorss = [
-        '#0000FF',
+       
         '#6CD3BF',
         '#1E5BC6',
         '#ED1C24',
         '#37BEDD',
-        '#FF80C7',
-        '#c82e37',
+       
         '#FFD800',
         '#F58020',
-        '#006EFF',
-        '#FFB800',
-        '#b2945e',
-        '#0b361f',
-        '#FFB800',
-        '#6E0000',
-        '#6E0000',
+        
+        
+       
         '#B6BABD',
-        '#F596C8',
+       
         '#2D826D',
         '#B12039',
         '#4E7C9B',

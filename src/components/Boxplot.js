@@ -69,7 +69,7 @@ const Boxgraph = ({datapt}) => {
   
     const stats = pit_time.map(d => boxplotStats(d))
   
-    console.log(constructorName)
+    // console.log(constructorName)
     
     const svgref = useRef(); 
 
@@ -159,7 +159,7 @@ const Boxgraph = ({datapt}) => {
     }, [datapt])
 
     
-  console.log("stats",stats)
+  // console.log("stats",stats)
 
 
   return(
