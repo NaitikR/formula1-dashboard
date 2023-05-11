@@ -6,7 +6,7 @@ import { boxplot, boxplotStats } from 'd3-boxplot';
 const boxdata = require('../utils/boxdata.json')
 
 
-const Boxgraph = ({datapt}) => {
+const Boxgraph = ({datapt, teamLine}) => {
     
     const M = {L: 10, R: 3, B: 5, T: 20}
 
@@ -27,7 +27,15 @@ const Boxgraph = ({datapt}) => {
     //     pit_time.push(datapt[i].pittime)
     // }
 
-    d3.map(boxdata, d => constructorName.push(d.constructorName))
+    d3.map(boxdata, d => {
+      if(d.constructorName == 'Red Bull') constructorName.push("RedBull")
+      else if(d.constructorName == 'Haas F1 Team') constructorName.push("HaasF1Team")
+      else if(d.constructorName == 'Aston Martin') constructorName.push("AstonMartin")
+      else if(d.constructorName == 'Alfa Romeo') constructorName.push("AlfaRomeo")
+      else if(d.constructorName == 'Alpine F1 Team') constructorName.push("AlpineF1Team")
+      else constructorName.push(d.constructorName)
+
+    } )
     d3.map(boxdata, d => pit_time.push(d.pittime))
     d3.map(boxdata, d => constructorId.push(d.constructorId))
     // console.log(pit_time)
@@ -42,30 +50,55 @@ const Boxgraph = ({datapt}) => {
   const datapoint = [1, 2, 3, 3.5, 3.6, 5, 6]
   const data = [[2.9, 3, 3.4, 3.5, 3.9, 5.6, 6], [2.2, 3, 3.4, 5.6, 3.6, 5, 6],[1, 2, 3, 3.5, 3.6, 5, 6],[1.2, 3.3, 3.4, 3.5, 3.6, 5, 6],[2, 3, 3.84, 3.95, 4.6, 5, 6],[1.8, 3, 3.4, 3.9, 4.4, 5, 6], [2.9, 3, 3.4, 3.5, 3.9, 5.6, 6], [2.2, 3, 3.4, 5.6, 3.6, 5, 6],[1, 2, 3, 3.5, 3.6, 5, 6],[1.2, 3.3, 3.4, 3.5, 3.6, 5, 6],[2, 3, 3.84, 3.95, 4.6, 5, 6],[1.8, 3, 3.4, 3.9, 4.4, 5, 6]]
 
-    let constructor_color_map = {
-      'Toro Rosso':'#0000FF',
-      'Mercedes':'#6CD3BF',
-      'Red Bull':'#1E5BC6',
-      'Ferrari':'#ED1C24',
-      'Williams':'#37BEDD',
-      'Force India':'#FF80C7',
-      'Virgin':'#c82e37',
-      'Renault':'#FFD800',
-      'McLaren':'#F58020',
-      'Sauber':'#006EFF',
-      'Lotus':'#FFB800',
-      'HRT':'#b2945e',
-      'Caterham':'#0b361f',
-      'Lotus F1':'#FFB800',
-      'Marussia':'#6E0000',
-      'Manor Marussia':'#6E0000',
-      'Haas F1 Team':'#B6BABD',
-      'Racing Point':'#F596C8',
-      'Aston Martin':'#2D826D',
-      'Alfa Romeo':'#B12039',
-      'AlphaTauri':'#4E7C9B',
-      'Alpine F1 Team':'#2293D1'
-  }
+  //   let constructor_color_map = {
+  //     'Toro Rosso':'#0000FF',
+  //     'Mercedes':'#6CD3BF',
+  //     'Red Bull':'#1E5BC6',
+  //     'Ferrari':'#ED1C24',
+  //     'Williams':'#37BEDD',
+  //     'Force India':'#FF80C7',
+  //     'Virgin':'#c82e37',
+  //     'Renault':'#FFD800',
+  //     'McLaren':'#F58020',
+  //     'Sauber':'#006EFF',
+  //     'Lotus':'#FFB800',
+  //     'HRT':'#b2945e',
+  //     'Caterham':'#0b361f',
+  //     'Lotus F1':'#FFB800',
+  //     'Marussia':'#6E0000',
+  //     'Manor Marussia':'#6E0000',
+  //     'Haas F1 Team':'#B6BABD',
+  //     'Racing Point':'#F596C8',
+  //     'Aston Martin':'#2D826D',
+  //     'Alfa Romeo':'#B12039',
+  //     'AlphaTauri':'#4E7C9B',
+  //     'Alpine F1 Team':'#2293D1'
+  // }
+
+  let constructor_color_map = {
+    'ToroRosso':'#0000FF',
+    'Mercedes':'#6CD3BF',
+    'RedBull':'#1E5BC6',
+    'Ferrari':'#ED1C24',
+    'Williams':'#37BEDD',
+    'ForceIndia':'#FF80C7',
+    'Virgin':'#c82e37',
+    'Renault':'#FFD800',
+    'McLaren':'#F58020',
+    'Sauber':'#006EFF',
+    'Lotus':'#FFB800',
+    'HRT':'#b2945e',
+    'Caterham':'#0b361f',
+    'Lotus F1':'#FFB800',
+    'Marussia':'#6E0000',
+    'Manor Marussia':'#6E0000',
+    'HaasF1Team':'#B6BABD',
+    'Racing Point':'#F596C8',
+    'AstonMartin':'#2D826D',
+    'AlfaRomeo':'#B12039',
+    'AlphaTauri':'#4E7C9B',
+    'AlpineF1Team':'#2293D1'
+}
   
     const stats = pit_time.map(d => boxplotStats(d))
   
@@ -73,8 +106,15 @@ const Boxgraph = ({datapt}) => {
     
     const svgref = useRef(); 
 
+    const clearChart=()=>{
+      const accessToRef = d3.select(svgref.current)
+      accessToRef.selectAll("svg").remove();
+  }
+
 
     useEffect(() => {
+
+    clearChart()
         
     const svg = d3.select(svgref.current)
         .attr("width", width)
@@ -154,9 +194,13 @@ const Boxgraph = ({datapt}) => {
     .attr('class', 'plot')
     .attr('transform', (_, i) => `translate(${[band(i), 0] })`)
     .attr('color', (_, i) =>  constructor_color_map[constructorName[i]] )
+    .attr("opacity", (_, i) => {
+      if(teamLine === undefined) return 1;
+      return constructorName[i] === teamLine ? 1 : 0.2;
+    })
     .call(plot)
 
-    }, [datapt])
+    }, [datapt, teamLine])
 
     
   // console.log("stats",stats)

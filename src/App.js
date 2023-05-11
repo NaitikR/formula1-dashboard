@@ -69,7 +69,12 @@ const App = () => {
             selectedDriver={selectedDriver}
           />} 
         </div>
-        <div className="div2"> {boxData &&  <Boxgraph datapt={boxData}/> } </div>
+        <div className="div2"> {boxData &&  
+          <Boxgraph 
+            datapt={boxData}
+            teamLine={teamLine}
+          /> } 
+        </div>
         <div className="div4"> {data && <LineChart data={data} teamLine={teamLine}/>} </div>
         <div className="div5"> {pcpdata && <PcpPlot data={pcpdata}/>} </div>
         <div className="div6"> {boxData && <LegendChart datapt={boxData}/> }</div>
