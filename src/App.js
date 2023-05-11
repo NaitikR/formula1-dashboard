@@ -76,7 +76,12 @@ const App = () => {
           /> } 
         </div>
         <div className="div4"> {data && <LineChart data={data} teamLine={teamLine}/>} </div>
-        <div className="div5"> {pcpdata && <PcpPlot data={pcpdata}/>} </div>
+        <div className="div5"> {pcpdata && 
+          <PcpPlot 
+            data={pcpdata}
+            teamLine={teamLine}
+          />} 
+        </div>
         <div className="div6"> {boxData && <LegendChart datapt={boxData}/> }</div>
       </div>
     </div>

@@ -1,11 +1,13 @@
 import { useEffect, useState, useRef } from "react";
 import * as d3 from "https://cdn.jsdelivr.net/npm/d3@7/+esm";
 
-const PcpPlot = ({data}) => {
+const PcpPlot = ({data, teamLine}) => {
 
     // const features = ['starting_position',
     // 'final_position', 'points', 'laps', 'fastestLap', 'Lap Time Secs',
     //  'fastestLapSpeed', 'pitstops', 'pit_duration']
+
+    let teamSelected = teamLine
 
      const features = ['circuit_name', 'Lap Time Secs', 'starting_position', 'fastestLapSpeed','pitstops', 'pit_duration',
     'final_position',  'points', 
@@ -21,6 +23,14 @@ const PcpPlot = ({data}) => {
       'final_position' : 'Finish Position',  
       'points' : 'Points'
       }
+
+      // console.log(data)
+
+      if(teamLine === "RedBull") teamSelected = "Red Bull"
+      else if(teamLine == 'HaasF1Team') teamSelected = "Haas F1 Team"
+      else if(teamLine == 'AstonMartin') teamSelected = "Aston Martin"
+      else if(teamLine == 'AlfaRomeo') teamSelected = "Alfa Romeo"
+      else if(teamLine == 'AlpineF1Team') teamSelected = "Alpine F1 Team"
 
 
     let constructor_color_map = {
@@ -47,6 +57,31 @@ const PcpPlot = ({data}) => {
       'AlphaTauri':'#4E7C9B',
       'Alpine F1 Team':'#2293D1'
   }
+
+//   let constructor_color_map = {
+//     'ToroRosso':'#0000FF',
+//     'Mercedes':'#6CD3BF',
+//     'RedBull':'#1E5BC6',
+//     'Ferrari':'#ED1C24',
+//     'Williams':'#37BEDD',
+//     'ForceIndia':'#FF80C7',
+//     'Virgin':'#c82e37',
+//     'Renault':'#FFD800',
+//     'McLaren':'#F58020',
+//     'Sauber':'#006EFF',
+//     'Lotus':'#FFB800',
+//     'HRT':'#b2945e',
+//     'Caterham':'#0b361f',
+//     'Lotus F1':'#FFB800',
+//     'Marussia':'#6E0000',
+//     'Manor Marussia':'#6E0000',
+//     'HaasF1Team':'#B6BABD',
+//     'Racing Point':'#F596C8',
+//     'AstonMartin':'#2D826D',
+//     'AlfaRomeo':'#B12039',
+//     'AlphaTauri':'#4E7C9B',
+//     'AlpineF1Team':'#2293D1'
+// }
 
     // const cluster_colors = data.color
     const width = window.innerWidth/2//500
@@ -114,6 +149,10 @@ const PcpPlot = ({data}) => {
         .attr("stroke", function (d,i) {
           return constructor_color_map[d.name]
         })
+        .attr("opacity", (d) => {
+          if(teamSelected === undefined) return 1;
+          return d.name === teamSelected ? 1 : 0;
+        })
         .attr("d", d => line(d3.cross(axisNames, [d], (axisName, d) => [axisName, d[axisName]])));
    
 
@@ -162,7 +201,7 @@ const PcpPlot = ({data}) => {
         svg.property("value", selected).dispatch("input");
     }
 
-    },[]) 
+    },[teamLine]) 
 
     return (
         <div
