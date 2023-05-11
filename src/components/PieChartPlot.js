@@ -75,6 +75,13 @@ const Piechartplot = ({MdsData}) => {
             .attr("height", height)
             .attr("viewBox", [-width / 2, -height / 2, width, height])
             .attr("style", "max-width: 100%; height: auto; height: intrinsic;");
+
+            svg.append("text")
+            .attr("class", "axisLabel")
+            .attr("text-anchor", "middle")
+          .attr("x", width/2) 
+          .attr("y", height+20) 
+          .text("Teams")
       
         svg.append("g")
             .attr("stroke", stroke)
@@ -106,6 +113,11 @@ const Piechartplot = ({MdsData}) => {
             .attr("y", (_, i) => `${i * 1.1}em`)
             .attr("font-weight", (_, i) => i ? null : "bold")
             .text(d => d);
+
+
+            
+
+
         
             //return Object.assign(svg.node(), {scales: {color}});
       }

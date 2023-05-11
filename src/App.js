@@ -5,6 +5,7 @@ import Sankeyplot from "./components/Sankey";
 import PcpPlot from "./components/PcpPlot";
 import Boxgraph from "./components/Boxplot";
 import Piechartplot from "./components/PieChartPlot";
+import LegendChart from "./components/Legend"
 
 const App = () => {
 
@@ -44,7 +45,7 @@ const App = () => {
         <div class="div2"> {boxData &&  <Boxgraph datapt={boxData}/> } </div>
         <div class="div4"> {data && <LineChart data={data}/>} </div>
         <div class="div5"> {pcpdata && <PcpPlot data={pcpdata}/>} </div>
-        <div class="div6"> </div>
+        <div class="div6"> {boxData && <LegendChart datapt={boxData}/> }</div>
       </div>
     </div>
   );
