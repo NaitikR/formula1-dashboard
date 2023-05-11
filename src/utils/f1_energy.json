@@ -1,0 +1,782 @@
+[
+    {
+        "source": "Fernando Alonso",
+        "target": "AlpineF1Team",
+        "value": 81.0
+    },
+    {
+        "source": "Kevin Magnussen",
+        "target": "HaasF1Team",
+        "value": 25.0
+    },
+    {
+        "source": "Carlos Sainz",
+        "target": "Ferrari",
+        "value": 246.0
+    },
+    {
+        "source": "Daniel Ricciardo",
+        "target": "McLaren",
+        "value": 37.0
+    },
+    {
+        "source": "Esteban Ocon",
+        "target": "AlpineF1Team",
+        "value": 92.0
+    },
+    {
+        "source": "Valtteri Bottas",
+        "target": "AlfaRomeo",
+        "value": 49.0
+    },
+    {
+        "source": "Lance Stroll",
+        "target": "AstonMartin",
+        "value": 18.0
+    },
+    {
+        "source": "George Russell",
+        "target": "Mercedes",
+        "value": 275.0
+    },
+    {
+        "source": "Nicholas Latifi",
+        "target": "Williams",
+        "value": 2.0
+    },
+    {
+        "source": "Alexander Albon",
+        "target": "Williams",
+        "value": 4.0
+    },
+    {
+        "source": "Sebastian Vettel",
+        "target": "AstonMartin",
+        "value": 37.0
+    },
+    {
+        "source": "Max Verstappen",
+        "target": "RedBull",
+        "value": 454.0
+    },
+    {
+        "source": "Pierre Gasly",
+        "target": "AlphaTauri",
+        "value": 23.0
+    },
+    {
+        "source": "Sergio Perez",
+        "target": "RedBull",
+        "value": 305.0
+    },
+    {
+        "source": "Charles Leclerc",
+        "target": "Ferrari",
+        "value": 308.0
+    },
+    {
+        "source": "Lewis Hamilton",
+        "target": "Mercedes",
+        "value": 240.0
+    },
+    {
+        "source": "Lando Norris",
+        "target": "McLaren",
+        "value": 122.0
+    },
+    {
+        "source": "Guanyu Zhou",
+        "target": "AlfaRomeo",
+        "value": 6.0
+    },
+    {
+        "source": "Mick Schumacher",
+        "target": "HaasF1Team",
+        "value": 12.0
+    },
+    {
+        "source": "Yuki Tsunoda",
+        "target": "AlphaTauri",
+        "value": 12.0
+    },
+    {
+        "source": "Fernando Alonso",
+        "target": "AlpineF1Team",
+        "value": 81.0
+    },
+    {
+        "source": "Carlos Sainz",
+        "target": "Ferrari",
+        "value": 164.5
+    },
+    {
+        "source": "Daniel Ricciardo",
+        "target": "McLaren",
+        "value": 115.0
+    },
+    {
+        "source": "Esteban Ocon",
+        "target": "AlpineF1Team",
+        "value": 74.0
+    },
+    {
+        "source": "Valtteri Bottas",
+        "target": "Mercedes",
+        "value": 226.0
+    },
+    {
+        "source": "Lance Stroll",
+        "target": "AstonMartin",
+        "value": 34.0
+    },
+    {
+        "source": "George Russell",
+        "target": "Williams",
+        "value": 16.0
+    },
+    {
+        "source": "Nicholas Latifi",
+        "target": "Williams",
+        "value": 7.0
+    },
+    {
+        "source": "Sebastian Vettel",
+        "target": "AstonMartin",
+        "value": 43.0
+    },
+    {
+        "source": "Max Verstappen",
+        "target": "RedBull",
+        "value": 395.5
+    },
+    {
+        "source": "Pierre Gasly",
+        "target": "AlphaTauri",
+        "value": 110.0
+    },
+    {
+        "source": "Sergio Perez",
+        "target": "RedBull",
+        "value": 190.0
+    },
+    {
+        "source": "Kimi Raikkonen",
+        "target": "AlfaRomeo",
+        "value": 10.0
+    },
+    {
+        "source": "Charles Leclerc",
+        "target": "Ferrari",
+        "value": 159.0
+    },
+    {
+        "source": "Lewis Hamilton",
+        "target": "Mercedes",
+        "value": 387.5
+    },
+    {
+        "source": "Lando Norris",
+        "target": "McLaren",
+        "value": 160.0
+    },
+    {
+        "source": "Antonio Giovinazzi",
+        "target": "AlfaRomeo",
+        "value": 3.0
+    },
+    {
+        "source": "Mick Schumacher",
+        "target": "HaasF1Team",
+        "value": 0.0
+    },
+    {
+        "source": "Yuki Tsunoda",
+        "target": "AlphaTauri",
+        "value": 32.0
+    },
+    {
+        "source": "Kevin Magnussen",
+        "target": "HaasF1Team",
+        "value": 1.0
+    },
+    {
+        "source": "Carlos Sainz",
+        "target": "McLaren",
+        "value": 105.0
+    },
+    {
+        "source": "Daniel Ricciardo",
+        "target": "Renault",
+        "value": 119.0
+    },
+    {
+        "source": "Esteban Ocon",
+        "target": "Renault",
+        "value": 62.0
+    },
+    {
+        "source": "Valtteri Bottas",
+        "target": "Mercedes",
+        "value": 223.0
+    },
+    {
+        "source": "George Russell",
+        "target": "Williams",
+        "value": 3.0
+    },
+    {
+        "source": "Nicholas Latifi",
+        "target": "Williams",
+        "value": 0.0
+    },
+    {
+        "source": "Alexander Albon",
+        "target": "RedBull",
+        "value": 105.0
+    },
+    {
+        "source": "Sebastian Vettel",
+        "target": "Ferrari",
+        "value": 33.0
+    },
+    {
+        "source": "Daniil Kvyat",
+        "target": "AlphaTauri",
+        "value": 32.0
+    },
+    {
+        "source": "Max Verstappen",
+        "target": "RedBull",
+        "value": 214.0
+    },
+    {
+        "source": "Pierre Gasly",
+        "target": "AlphaTauri",
+        "value": 75.0
+    },
+    {
+        "source": "Kimi Raikkonen",
+        "target": "AlfaRomeo",
+        "value": 4.0
+    },
+    {
+        "source": "Charles Leclerc",
+        "target": "Ferrari",
+        "value": 98.0
+    },
+    {
+        "source": "Lewis Hamilton",
+        "target": "Mercedes",
+        "value": 347.0
+    },
+    {
+        "source": "Lando Norris",
+        "target": "McLaren",
+        "value": 97.0
+    },
+    {
+        "source": "Antonio Giovinazzi",
+        "target": "AlfaRomeo",
+        "value": 4.0
+    },
+    {
+        "source": "Romain Grosjean",
+        "target": "HaasF1Team",
+        "value": 8.0
+    },
+    {
+        "source": "Kevin Magnussen",
+        "target": "HaasF1Team",
+        "value": 20.0
+    },
+    {
+        "source": "Carlos Sainz",
+        "target": "McLaren",
+        "value": 96.0
+    },
+    {
+        "source": "Nico Hulkenberg",
+        "target": "Renault",
+        "value": 37.0
+    },
+    {
+        "source": "Daniel Ricciardo",
+        "target": "Renault",
+        "value": 54.0
+    },
+    {
+        "source": "Valtteri Bottas",
+        "target": "Mercedes",
+        "value": 326.0
+    },
+    {
+        "source": "George Russell",
+        "target": "Williams",
+        "value": 0.0
+    },
+    {
+        "source": "Alexander Albon",
+        "target": "RedBull",
+        "value": 92.0
+    },
+    {
+        "source": "Sebastian Vettel",
+        "target": "Ferrari",
+        "value": 240.0
+    },
+    {
+        "source": "Max Verstappen",
+        "target": "RedBull",
+        "value": 278.0
+    },
+    {
+        "source": "Kimi Raikkonen",
+        "target": "AlfaRomeo",
+        "value": 43.0
+    },
+    {
+        "source": "Charles Leclerc",
+        "target": "Ferrari",
+        "value": 264.0
+    },
+    {
+        "source": "Lewis Hamilton",
+        "target": "Mercedes",
+        "value": 413.0
+    },
+    {
+        "source": "Lando Norris",
+        "target": "McLaren",
+        "value": 49.0
+    },
+    {
+        "source": "Antonio Giovinazzi",
+        "target": "AlfaRomeo",
+        "value": 14.0
+    },
+    {
+        "source": "Fernando Alonso",
+        "target": "McLaren",
+        "value": 50.0
+    },
+    {
+        "source": "Romain Grosjean",
+        "target": "HaasF1Team",
+        "value": 37.0
+    },
+    {
+        "source": "Kevin Magnussen",
+        "target": "HaasF1Team",
+        "value": 56.0
+    },
+    {
+        "source": "Carlos Sainz",
+        "target": "Renault",
+        "value": 53.0
+    },
+    {
+        "source": "Nico Hulkenberg",
+        "target": "Renault",
+        "value": 69.0
+    },
+    {
+        "source": "Daniel Ricciardo",
+        "target": "RedBull",
+        "value": 170.0
+    },
+    {
+        "source": "Valtteri Bottas",
+        "target": "Mercedes",
+        "value": 247.0
+    },
+    {
+        "source": "Lance Stroll",
+        "target": "Williams",
+        "value": 6.0
+    },
+    {
+        "source": "Sebastian Vettel",
+        "target": "Ferrari",
+        "value": 320.0
+    },
+    {
+        "source": "Max Verstappen",
+        "target": "RedBull",
+        "value": 249.0
+    },
+    {
+        "source": "Kimi Raikkonen",
+        "target": "Ferrari",
+        "value": 251.0
+    },
+    {
+        "source": "Lewis Hamilton",
+        "target": "Mercedes",
+        "value": 408.0
+    },
+    {
+        "source": "Fernando Alonso",
+        "target": "McLaren",
+        "value": 17.0
+    },
+    {
+        "source": "Romain Grosjean",
+        "target": "HaasF1Team",
+        "value": 28.0
+    },
+    {
+        "source": "Kevin Magnussen",
+        "target": "HaasF1Team",
+        "value": 19.0
+    },
+    {
+        "source": "Carlos Sainz",
+        "target": "Renault",
+        "value": 54.0
+    },
+    {
+        "source": "Nico Hulkenberg",
+        "target": "Renault",
+        "value": 43.0
+    },
+    {
+        "source": "Daniel Ricciardo",
+        "target": "RedBull",
+        "value": 200.0
+    },
+    {
+        "source": "Valtteri Bottas",
+        "target": "Mercedes",
+        "value": 305.0
+    },
+    {
+        "source": "Felipe Massa",
+        "target": "Williams",
+        "value": 43.0
+    },
+    {
+        "source": "Lance Stroll",
+        "target": "Williams",
+        "value": 40.0
+    },
+    {
+        "source": "Sebastian Vettel",
+        "target": "Ferrari",
+        "value": 317.0
+    },
+    {
+        "source": "Max Verstappen",
+        "target": "RedBull",
+        "value": 168.0
+    },
+    {
+        "source": "Kimi Raikkonen",
+        "target": "Ferrari",
+        "value": 205.0
+    },
+    {
+        "source": "Lewis Hamilton",
+        "target": "Mercedes",
+        "value": 363.0
+    },
+    {
+        "source": "Jenson Button",
+        "target": "McLaren",
+        "value": 21.0
+    },
+    {
+        "source": "Fernando Alonso",
+        "target": "McLaren",
+        "value": 54.0
+    },
+    {
+        "source": "Romain Grosjean",
+        "target": "HaasF1Team",
+        "value": 29.0
+    },
+    {
+        "source": "Kevin Magnussen",
+        "target": "Renault",
+        "value": 7.0
+    },
+    {
+        "source": "Daniel Ricciardo",
+        "target": "RedBull",
+        "value": 256.0
+    },
+    {
+        "source": "Nico Rosberg",
+        "target": "Mercedes",
+        "value": 385.0
+    },
+    {
+        "source": "Valtteri Bottas",
+        "target": "Williams",
+        "value": 85.0
+    },
+    {
+        "source": "Felipe Massa",
+        "target": "Williams",
+        "value": 53.0
+    },
+    {
+        "source": "Sebastian Vettel",
+        "target": "Ferrari",
+        "value": 212.0
+    },
+    {
+        "source": "Max Verstappen",
+        "target": "RedBull",
+        "value": 204.0
+    },
+    {
+        "source": "Kimi Raikkonen",
+        "target": "Ferrari",
+        "value": 186.0
+    },
+    {
+        "source": "Lewis Hamilton",
+        "target": "Mercedes",
+        "value": 380.0
+    },
+    {
+        "source": "Jenson Button",
+        "target": "McLaren",
+        "value": 16.0
+    },
+    {
+        "source": "Fernando Alonso",
+        "target": "McLaren",
+        "value": 11.0
+    },
+    {
+        "source": "Daniel Ricciardo",
+        "target": "RedBull",
+        "value": 92.0
+    },
+    {
+        "source": "Nico Rosberg",
+        "target": "Mercedes",
+        "value": 322.0
+    },
+    {
+        "source": "Valtteri Bottas",
+        "target": "Williams",
+        "value": 136.0
+    },
+    {
+        "source": "Felipe Massa",
+        "target": "Williams",
+        "value": 121.0
+    },
+    {
+        "source": "Sebastian Vettel",
+        "target": "Ferrari",
+        "value": 278.0
+    },
+    {
+        "source": "Daniil Kvyat",
+        "target": "RedBull",
+        "value": 95.0
+    },
+    {
+        "source": "Kimi Raikkonen",
+        "target": "Ferrari",
+        "value": 150.0
+    },
+    {
+        "source": "Lewis Hamilton",
+        "target": "Mercedes",
+        "value": 381.0
+    },
+    {
+        "source": "Jenson Button",
+        "target": "McLaren",
+        "value": 126.0
+    },
+    {
+        "source": "Fernando Alonso",
+        "target": "Ferrari",
+        "value": 161.0
+    },
+    {
+        "source": "Kevin Magnussen",
+        "target": "McLaren",
+        "value": 55.0
+    },
+    {
+        "source": "Daniel Ricciardo",
+        "target": "RedBull",
+        "value": 238.0
+    },
+    {
+        "source": "Nico Rosberg",
+        "target": "Mercedes",
+        "value": 317.0
+    },
+    {
+        "source": "Valtteri Bottas",
+        "target": "Williams",
+        "value": 186.0
+    },
+    {
+        "source": "Felipe Massa",
+        "target": "Williams",
+        "value": 134.0
+    },
+    {
+        "source": "Sebastian Vettel",
+        "target": "RedBull",
+        "value": 167.0
+    },
+    {
+        "source": "Kimi Raikkonen",
+        "target": "Ferrari",
+        "value": 55.0
+    },
+    {
+        "source": "Lewis Hamilton",
+        "target": "Mercedes",
+        "value": 384.0
+    },
+    {
+        "source": "Jenson Button",
+        "target": "McLaren",
+        "value": 73.0
+    },
+    {
+        "source": "Fernando Alonso",
+        "target": "Ferrari",
+        "value": 242.0
+    },
+    {
+        "source": "Nico Rosberg",
+        "target": "Mercedes",
+        "value": 171.0
+    },
+    {
+        "source": "Mark Webber",
+        "target": "RedBull",
+        "value": 199.0
+    },
+    {
+        "source": "Pastor Maldonado",
+        "target": "Williams",
+        "value": 1.0
+    },
+    {
+        "source": "Valtteri Bottas",
+        "target": "Williams",
+        "value": 4.0
+    },
+    {
+        "source": "Felipe Massa",
+        "target": "Ferrari",
+        "value": 112.0
+    },
+    {
+        "source": "Sebastian Vettel",
+        "target": "RedBull",
+        "value": 397.0
+    },
+    {
+        "source": "Sergio Perez",
+        "target": "McLaren",
+        "value": 49.0
+    },
+    {
+        "source": "Lewis Hamilton",
+        "target": "Mercedes",
+        "value": 189.0
+    },
+    {
+        "source": "Jenson Button",
+        "target": "McLaren",
+        "value": 188.0
+    },
+    {
+        "source": "Fernando Alonso",
+        "target": "Ferrari",
+        "value": 278.0
+    },
+    {
+        "source": "Nico Rosberg",
+        "target": "Mercedes",
+        "value": 93.0
+    },
+    {
+        "source": "Mark Webber",
+        "target": "RedBull",
+        "value": 179.0
+    },
+    {
+        "source": "Pastor Maldonado",
+        "target": "Williams",
+        "value": 45.0
+    },
+    {
+        "source": "Felipe Massa",
+        "target": "Ferrari",
+        "value": 122.0
+    },
+    {
+        "source": "Sebastian Vettel",
+        "target": "RedBull",
+        "value": 281.0
+    },
+    {
+        "source": "Michael Schumacher",
+        "target": "Mercedes",
+        "value": 49.0
+    },
+    {
+        "source": "Lewis Hamilton",
+        "target": "McLaren",
+        "value": 190.0
+    },
+    {
+        "source": "Jenson Button",
+        "target": "McLaren",
+        "value": 270.0
+    },
+    {
+        "source": "Fernando Alonso",
+        "target": "Ferrari",
+        "value": 257.0
+    },
+    {
+        "source": "Nico Rosberg",
+        "target": "Mercedes",
+        "value": 89.0
+    },
+    {
+        "source": "Mark Webber",
+        "target": "RedBull",
+        "value": 258.0
+    },
+    {
+        "source": "Pastor Maldonado",
+        "target": "Williams",
+        "value": 1.0
+    },
+    {
+        "source": "Felipe Massa",
+        "target": "Ferrari",
+        "value": 118.0
+    },
+    {
+        "source": "Sebastian Vettel",
+        "target": "RedBull",
+        "value": 392.0
+    },
+    {
+        "source": "Michael Schumacher",
+        "target": "Mercedes",
+        "value": 76.0
+    },
+    {
+        "source": "Lewis Hamilton",
+        "target": "McLaren",
+        "value": 227.0
+    }
+]

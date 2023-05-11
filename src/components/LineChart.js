@@ -70,14 +70,6 @@ const LineChart = ({data}) => {
       'Alpine F1 Team':'#2293D1'
   }
 
-  // console.log(constructor_color_map['Mercedes'])
-    // var color = d3.scaleOrdinal()
-    // .domain(mediaName)
-    // .range(colors)
-
-    // console.log(mediaName)
-    // let color = d3.scaleOrdinal().domain(mediaName).range(colorbrewer.Set2[6])
-    
 
     const line = d3.line()
       .defined(i => filter_data[i])
