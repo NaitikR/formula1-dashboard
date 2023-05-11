@@ -9,16 +9,16 @@ const PcpPlot = ({data, teamLine}) => {
 
     // let teamSelected = teamLine
 
-    let teamSelected = teamLine.filter( function( el ) {
+    let teamSelected = teamLine.map( function( el ) {
       // console.log(el)
-      if(el === "RedBull") return "Red Bull"
+      if(el == "RedBull") return "Red Bull"
       else if(el == 'HaasF1Team') return "Haas F1 Team"
       else if(el == 'AstonMartin') return "Aston Martin"
       else if(el == 'AlfaRomeo') return "Alfa Romeo"
       else if(el == 'AlpineF1Team') return "Alpine F1 Team"
       return el
     } );
-    // console.log(gg)
+    // console.log(teamSelected)
 
      const features = ['circuit_name', 'Lap Time Secs', 'starting_position', 'fastestLapSpeed','pitstops', 'pit_duration',
     'final_position',  'points', 
@@ -37,11 +37,11 @@ const PcpPlot = ({data, teamLine}) => {
 
       // console.log(data)
 
-      if(teamLine === "RedBull") teamSelected = "Red Bull"
-      else if(teamLine == 'HaasF1Team') teamSelected = "Haas F1 Team"
-      else if(teamLine == 'AstonMartin') teamSelected = "Aston Martin"
-      else if(teamLine == 'AlfaRomeo') teamSelected = "Alfa Romeo"
-      else if(teamLine == 'AlpineF1Team') teamSelected = "Alpine F1 Team"
+      // if(teamLine === "RedBull") teamSelected = "Red Bull"
+      // else if(teamLine == 'HaasF1Team') teamSelected = "Haas F1 Team"
+      // else if(teamLine == 'AstonMartin') teamSelected = "Aston Martin"
+      // else if(teamLine == 'AlfaRomeo') teamSelected = "Alfa Romeo"
+      // else if(teamLine == 'AlpineF1Team') teamSelected = "Alpine F1 Team"
 
 
     let constructor_color_map = {

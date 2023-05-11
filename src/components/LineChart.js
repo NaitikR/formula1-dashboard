@@ -124,7 +124,7 @@ const LineChart = ({data, teamLine}) => {
     .attr("stroke", "blue")
     // .attr("stroke-linecap", strokeLinecap)
     // .attr("stroke-linejoin", strokeLinejoin)
-    .attr("stroke-width", 2)
+    .attr("stroke-width", 3)
     // .attr("stroke-opacity", strokeOpacity)
   .selectAll("path")
   .data(d3.group(I, i => Z[i]))
@@ -137,27 +137,6 @@ const LineChart = ({data, teamLine}) => {
       // return 1;
     })
     .attr("d", ([, I]) => line(I));
-    
-
-    // let legend = d3.select("svg")
-    //     .selectAll('g.legend')
-    //     .data(sumstat)
-    //     .enter()
-    //     .append("g")
-    //     .attr("class", "legend");
-    
-    //     legend.append("circle")
-    //     .attr("cx", 800)
-    //     .attr('cy', (d, i) => i * 30 + 100)
-    //     .attr("r", 5)
-    //     .style("fill", d => constructor_color_map[d.key])
-    
-        // legend.append("text")
-        // .attr("font-size", 13)
-        // .attr("fill", "white")
-        // .attr("x", 820)
-        // .attr("y", (d, i) => i * 30 + 100)
-        // .text(d => d.key)
         
         
     }, [data,teamLine])

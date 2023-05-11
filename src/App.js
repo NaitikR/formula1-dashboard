@@ -24,6 +24,7 @@ const App = () => {
 
   const linkDriverNationality = (value) => {
     // console.log(value)
+    
     setDriver(value);
   }
 
@@ -84,6 +85,7 @@ const App = () => {
             linkTeamLineChart={linkTeamLineChart}
             teamLine={teamLine}
             setTeamLine={setTeamLine}
+            resetStates={resetStates}
           /> 
         </div>
         {/* <div class="div2"> {conPie && <Piechartplot MdsData={conPie}/>} </div> */}

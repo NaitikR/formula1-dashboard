@@ -178,11 +178,22 @@ function SankeyChart({
             props.linkTeamLineChart(d.id);
           }
           else {
-            props.linkDriverNationality(d.id);
-            props.linkTeamLineChart(undefined);
+            props.resetStates()
+            // props.linkDriverNationality(d.id);
+            // props.linkTeamLineChart(undefined);
 
           } 
         })
+        .on("mouseover", function(d, i) {
+          d3.select(this).transition()
+         .duration('50')
+         .attr('opacity', '.5')
+      })
+      .on('mouseout', function (d, i) {
+          d3.select(this).transition()
+         .duration('50')
+         .attr('opacity', '1')
+      });
   console.log(nodes)
       if (G) node.attr("fill", ({index: i}) => constructor_color_map[G[i]]? constructor_color_map[G[i]] : "#9e9e9e");
       if (Tt) node.append("title").text(({index: i}) => Tt[i]);
