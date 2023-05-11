@@ -15,16 +15,23 @@ body {
 #header {
   color: #fff;
   text-align: center;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   background-color: #d90000d5;
   height: 60px;
   display: flex;
   font-family: 'Montserrat', sans-serif;
   font-size: 1.6em;
-  font-weight: bold;
+  font-weight: 700;
   text-transform: uppercase;
 }
+
+#logodiv {
+  background-color: #fff;
+  height: 60px;
+  width: 60px;
+}
+
 .card {
   padding: 1em;
   background-color: rgb(86, 86, 86);

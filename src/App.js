@@ -6,6 +6,9 @@ import PcpPlot from "./components/PcpPlot";
 import Boxgraph from "./components/Boxplot";
 import Piechartplot from "./components/PieChartPlot";
 import LegendChart from "./components/Legend"
+import { Button } from "@mui/material";
+import AutorenewIcon  from "@mui/icons-material/Autorenew";
+import diamond from "./utils/formula-1-logo-0.png"  ;
 
 const App = () => {
 
@@ -37,6 +40,12 @@ const App = () => {
   const driver_name_url = "https://gist.githubusercontent.com/SimrnGupta/c03f2a27daeadfec774bd2e4f0acb556/raw/driver_constructors.csv"
   const drivpieurl = "https://gist.githubusercontent.com/NaitikR/0bfbe34014622849714dc03d72010bcb/raw/735cd577803e0369d37752dd37f0981984dc8863/newnationfinal.csv"
 
+
+  const resetStates = () => {
+    setDriver("");
+    setTeamLine([]);
+  }
+
   useEffect(() => {
     d3.csv(csvUrl).then(data => {
       setData(data)
@@ -53,7 +62,20 @@ const App = () => {
   }, [teamLine])
   return (
     <div className="App">
-      <div id="header"> Formula 1 : The Pit Wall</div>
+
+      <div id="header"> <div id="logodiv"> <img src={diamond} height={"100%"} width={"100%"}/> </div> Formula 1 : The Pit Wall
+
+      <Button 
+      
+      style={{backgroundColor: "#eeeeee", color:"black", marginRight:20}}
+      variant="contained" //"outlined" 
+      startIcon={<AutorenewIcon />}
+       onClick={() => {
+        resetStates()
+       }}>
+        Reset
+        </Button>
+      </div>
 
       <div className="parent">
         <div class="div1"> 
