@@ -130,7 +130,7 @@ const LineChart = ({data, teamLine}) => {
     // .style("mix-blend-mode", mixBlendMode)
     .attr("stroke", (d,i) => constructor_color_map[d[0]])
     .attr("opacity", d => {
-      if(teamLine === "") return 1;
+      if(teamLine === undefined) return 1;
       return d[0] === teamLine ? 1 : 0.2;
       // return 1;
     })
@@ -158,8 +158,9 @@ const LineChart = ({data, teamLine}) => {
         // .text(d => d.key)
         
         
-    }, [data, teamLine])
-    clearChart()
+    }, [data,teamLine])
+    if(teamLine != undefined) clearChart()
+    // clearChart()
     
 
 

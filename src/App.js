@@ -15,7 +15,7 @@ const App = () => {
   const [conPie, setConPie] = useState();
   const [boxData, setBoxData] = useState();
   const [driverData, setDriverData] = useState();
-  const [teamLine, setTeamLine] = useState("");
+  const [teamLine, setTeamLine] = useState();
 
   const [selectedDriver, setDriver] = useState("");
 
