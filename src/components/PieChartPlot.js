@@ -47,7 +47,7 @@ const Piechartplot = ({MdsData, driverData, selectedDriver}) => {
         height = 300, // outer height, in pixels
         innerRadius = 0, // inner radius of pie, in pixels (non-zero for donut)
         outerRadius = Math.min(width, height) / 2, // outer radius of pie, in pixels
-        labelRadius = (innerRadius * 0.2 + outerRadius * 0.8), // center radius of labels
+        labelRadius = (innerRadius * 0.2 + outerRadius * 0.73), // center radius of labels
         format = ",", // a format specifier for values (in the label)
         names, // array of names (the domain of the color scale)
         colors, // array of colors for names
@@ -76,7 +76,7 @@ const Piechartplot = ({MdsData, driverData, selectedDriver}) => {
         // Compute titles.
         if (title === undefined) {
           const formatValue = d3.format(format);
-          title = i => `${N[i]}\n${formatValue(V[i])}`;
+          title = i => `${N[i]}`;
         } else {
           const O = d3.map(data, d => d);
           const T = title;
@@ -84,7 +84,7 @@ const Piechartplot = ({MdsData, driverData, selectedDriver}) => {
         }
        
         // Construct arcs.
-        const arcs = d3.pie().padAngle(padAngle).sort(null).value(i => V[i])(I);
+        const arcs = d3.pie().padAngle(padAngle).sort(null).value(i => V[i]+3)(I);
         const arc = d3.arc().innerRadius(innerRadius).outerRadius(outerRadius);
         const arcLabel = d3.arc().innerRadius(labelRadius).outerRadius(labelRadius);
         
@@ -125,7 +125,7 @@ const Piechartplot = ({MdsData, driverData, selectedDriver}) => {
             .text(d => title(d.data));
       
         svg.append("g")
-            .attr("font-family", "sans-serif")
+            .attr("font-family", "Montserrat")
             .attr("font-size", 10)
             .attr("text-anchor", "middle")
           .selectAll("text")
