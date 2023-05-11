@@ -15,7 +15,7 @@ const App = () => {
   const [conPie, setConPie] = useState();
   const [boxData, setBoxData] = useState();
   const [driverData, setDriverData] = useState();
-  const [teamLine, setTeamLine] = useState();
+  const [teamLine, setTeamLine] = useState([]);
 
   const [selectedDriver, setDriver] = useState("");
 
@@ -25,8 +25,9 @@ const App = () => {
   }
 
   const linkTeamLineChart = (value) => {
-    setTeamLine(value);
+    setTeamLine(current => [...current, value])
   }
+  // console.log(teamLine)
   const csvUrl = "https://gist.githubusercontent.com/NaitikR/dd1b640612c58836026f12b7c8f21b4e/raw/5c47b9e1d639a053f2c4bf326e0021c54865ee5c/linechartfinal.csv"
   // const csvUrl = "https://gist.githubusercontent.com/SimrnGupta/656df80380d93af3d5803a74d0d707ae/raw/constructors_positions.csv"
   const csvUrl2 = "https://gist.githubusercontent.com/SimrnGupta/6e0e8a7be7ec520185a7739e170312c5/raw/pcpdatanew.csv"
@@ -59,6 +60,8 @@ const App = () => {
           <Sankeyplot 
             linkDriverNationality={linkDriverNationality}
             linkTeamLineChart={linkTeamLineChart}
+            teamLine={teamLine}
+            setTeamLine={setTeamLine}
           /> 
         </div>
         {/* <div class="div2"> {conPie && <Piechartplot MdsData={conPie}/>} </div> */}

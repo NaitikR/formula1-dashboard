@@ -7,6 +7,8 @@ const boxdata = require('../utils/boxdata.json')
 
 
 const Boxgraph = ({datapt, teamLine}) => {
+
+  // console.log(teamLine)
     
     const M = {L: 10, R: 3, B: 5, T: 20}
 
@@ -195,8 +197,10 @@ const Boxgraph = ({datapt, teamLine}) => {
     .attr('transform', (_, i) => `translate(${[band(i), 0] })`)
     .attr('color', (_, i) =>  constructor_color_map[constructorName[i]] )
     .attr("opacity", (_, i) => {
-      if(teamLine === undefined) return 1;
-      return constructorName[i] === teamLine ? 1 : 0.2;
+      if(teamLine.length === 0) return 1;
+      return teamLine.includes(constructorName[i]) ? 1 : 0.2;
+      // if(teamLine === undefined) return 1;
+      // return constructorName[i] === teamLine ? 1 : 0.2;
     })
     .call(plot)
 

@@ -7,8 +7,7 @@ const LineChart = ({data, teamLine}) => {
     const margin = {top: 20, bottom: 30, left: 40, right: 30};
     const width = 500//window.innerWidth/3//850
     const height = 400//window.innerHeight/3//600
-
-    // console.log(data)
+    // console.log(teamLine)
 
     let toRemove = ["ToroRosso", "ManorMaruss", "LotusF1", "Sauber", "ForceIndia", "RacingPoint", 'ManorMarussia', 'Marussia', 'Caterham', 'Lotus']
 
@@ -133,8 +132,8 @@ const LineChart = ({data, teamLine}) => {
     // .style("mix-blend-mode", mixBlendMode)
     .attr("stroke", (d,i) => constructor_color_map[d[0]])
     .attr("opacity", d => {
-      if(teamLine === undefined) return 1;
-      return d[0] === teamLine ? 1 : 0.2;
+      if(teamLine.length === 0) return 1;
+      return teamLine.includes(d[0]) ? 1 : 0.2;
       // return 1;
     })
     .attr("d", ([, I]) => line(I));

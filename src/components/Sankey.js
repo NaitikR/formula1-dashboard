@@ -8,6 +8,8 @@ const Sankeyplot = (props) => {
 
     const svgref = useRef(); 
     let sankey = d3Sankey();
+    // console.log(props.teamLine)
+    const [teams, setTeams] = useState([]);
 
  
     useEffect(() => {
@@ -171,7 +173,7 @@ function SankeyChart({
         .attr("width", d => d.x1 - d.x0)
         
         .on("click", function(event,d) {
-          // console.log(d.index)
+          // console.log(props.teamLine)
           if(constructor_color_map[G[d.index]]) {
             props.linkTeamLineChart(d.id);
           }

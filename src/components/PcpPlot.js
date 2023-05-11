@@ -7,7 +7,18 @@ const PcpPlot = ({data, teamLine}) => {
     // 'final_position', 'points', 'laps', 'fastestLap', 'Lap Time Secs',
     //  'fastestLapSpeed', 'pitstops', 'pit_duration']
 
-    let teamSelected = teamLine
+    // let teamSelected = teamLine
+
+    let teamSelected = teamLine.filter( function( el ) {
+      // console.log(el)
+      if(el === "RedBull") return "Red Bull"
+      else if(el == 'HaasF1Team') return "Haas F1 Team"
+      else if(el == 'AstonMartin') return "Aston Martin"
+      else if(el == 'AlfaRomeo') return "Alfa Romeo"
+      else if(el == 'AlpineF1Team') return "Alpine F1 Team"
+      return el
+    } );
+    // console.log(gg)
 
      const features = ['circuit_name', 'Lap Time Secs', 'starting_position', 'fastestLapSpeed','pitstops', 'pit_duration',
     'final_position',  'points', 
@@ -150,8 +161,10 @@ const PcpPlot = ({data, teamLine}) => {
           return constructor_color_map[d.name]
         })
         .attr("opacity", (d) => {
-          if(teamSelected === undefined) return 1;
-          return d.name === teamSelected ? 1 : 0;
+          if(teamSelected.length === 0) return 1;
+          return teamSelected.includes( d.name) ? 1 : 0;
+          // if(teamSelected === undefined) return 1;
+          // return d.name === teamSelected ? 1 : 0;
         })
         .attr("d", d => line(d3.cross(axisNames, [d], (axisName, d) => [axisName, d[axisName]])));
    
